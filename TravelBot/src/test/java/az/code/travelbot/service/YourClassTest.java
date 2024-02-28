@@ -15,10 +15,10 @@ import static org.mockito.Mockito.when;
 class YourClassTest {
 
     @Mock
-    private UserService userService; // UserService sınıfına göre uygun bir mock sınıfıdır.
+    private UserService userService;
 
     @InjectMocks
-    private YourClass yourClass; // YourClass, setShareContact metodunu içeren sınıftır.
+    private YourClass yourClass;
 
     @Test
     void testSetShareContactUserNotExists() {
@@ -52,7 +52,7 @@ class YourClassTest {
         MockitoAnnotations.openMocks(this);
 
 
-        when(userService.getUserByChatId(5678L)).thenReturn(new User()); // User sınıfına göre uygun bir mock nesnesidir.
+        when(userService.getUserByChatId(5678L)).thenReturn(new User());
 
 
         Update update = new Update();
